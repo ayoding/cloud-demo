@@ -28,10 +28,6 @@ public class OrderConfig {
      */
     @Bean
     public IRule randomRule(){
-        System.out.println(1);
-        System.out.println(1);
-        System.out.println(1);
-        System.out.println(2);
         return new RandomRule();
     }
 }
