@@ -49,7 +49,7 @@ public class UserController {
     @GetMapping("/prop")
     public String propertiesP(){
 
-          System.out.print("123456")
+          System.out.print("123456");
         return configProperties.getName();
     }
 }
