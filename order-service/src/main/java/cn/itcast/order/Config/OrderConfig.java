@@ -20,7 +20,7 @@ public class OrderConfig {
     public RestTemplate restTemplate(){
         return new RestTemplate();
     }
-
+  
     /**
      * 随机规则
      *  全局有效

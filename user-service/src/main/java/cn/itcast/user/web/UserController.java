@@ -48,6 +48,8 @@ public class UserController {
 
     @GetMapping("/prop")
     public String propertiesP(){
+
+        System.out.println(configProperties.getDateformat());
         return configProperties.getName();
     }
 }
