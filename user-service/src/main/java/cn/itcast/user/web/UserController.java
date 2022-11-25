@@ -46,10 +46,10 @@ public class UserController {
         return format;
     }
 
-    @GetMapping("/prop")
-    public String propertiesP(){
-
-          System.out.print("123456");
-        return configProperties.getName();
-    }
+//    @GetMapping("/prop")
+//    public String propertiesP(){
+//
+//          System.out.print("123456");
+//        return configProperties.getName();
+//    }
 }

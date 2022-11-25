@@ -13,7 +13,7 @@ spring:
       server-addr: localhost:8848  #nacos服务器地址
       discovery:
         cluster-name: JM
-        namespace: 69e330c0-ab2f-478c-8135-07931925d67c  #dev的id
+#        namespace: 69e330c0-ab2f-478c-8135-07931925d67c  #dev的id
         ephemeral: false  #临时实例    主动发送心跳   永久实例  nacos主动发送询问是否还在
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
@@ -29,11 +29,21 @@ logging:
 #  client:
 #    service-url:
 #      defaultZone: http://127.0.0.1:10087/eureka
-userservice:
-  ribbon:                                             #有限本地服务
-    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule #仅对userservice服务有效
+#userservice:
+#  ribbon:                                             #有限本地服务
+#    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule #仅对userservice服务有效
 ribbon:
    eager-load:
     clients:
       - userservice   #饥饿加载的服务名称
     enabled: true #饥饿加载
+
+feign:
+  client:
+    config:
+      default:
+        loggerLevel: FULL  #feign日志级别
+  httpclient:
+    enabled: true  #开启feign 的httpClient支持
+    max-connections: 200  #最大连接数
+    max-connections-per-route: 50  #每个路径的最大连接数
