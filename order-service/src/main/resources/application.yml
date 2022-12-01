@@ -10,11 +10,11 @@ spring:
     name: orderservice
   cloud:
     nacos:
-      server-addr: localhost:8848  #nacos服务器地址
-      discovery:
-        cluster-name: JM
-#        namespace: 69e330c0-ab2f-478c-8135-07931925d67c  #dev的id
-        ephemeral: false  #临时实例    主动发送心跳   永久实例  nacos主动发送询问是否还在
+      server-addr: localhost:80  #nacos服务器地址
+#      discovery:
+#        cluster-name: JM
+##        namespace: 69e330c0-ab2f-478c-8135-07931925d67c  #dev的id
+#        ephemeral: false  #临时实例    主动发送心跳   永久实例  nacos主动发送询问是否还在
 mybatis:
   type-aliases-package: cn.itcast.user.pojo
   configuration:
@@ -39,10 +39,10 @@ ribbon:
     enabled: true #饥饿加载
 
 feign:
-  client:
-    config:
-      default:
-        loggerLevel: FULL  #feign日志级别
+#  client:
+#    config:
+#      default:
+#        loggerLevel: None  #feign日志级别
   httpclient:
     enabled: true  #开启feign 的httpClient支持
     max-connections: 200  #最大连接数

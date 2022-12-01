@@ -1,7 +1,7 @@
 spring:
   cloud:
     nacos:
-      server-addr: localhost:8848  #服务地址
+      server-addr: localhost:80  #服务地址
       config:
         file-extension: yaml   #配置文件后缀
   profiles:

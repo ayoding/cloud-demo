@@ -1,4 +1,4 @@
-package cn.itcast.order.Config;
+package cn.itcas.feign.Config;
 
 
 import com.netflix.loadbalancer.IRule;
