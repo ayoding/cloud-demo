@@ -13,7 +13,14 @@ spring:
           predicates: #断言   只有符合断言的请求才能通过网关
             - Path=/user/**  #路径断言
 
+
         - id: order-service
           uri: lb://orderservice
           predicates:
             - Path=/order/**
+            - Before=2037-01-20T17:42:47.789-07:00[America/Denver]
+
+
+      default-filters:
+          - AddRequestHeader=Truth, Itcast is freaking ouyanglang! # 添加请求头
+
